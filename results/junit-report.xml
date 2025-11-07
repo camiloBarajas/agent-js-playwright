@@ -1,2 +1,116 @@
-<testsuites id="" name="" tests="0" failures="0" skipped="0" errors="0" time="0.929443">
+<testsuites id="" name="" tests="35" failures="1" skipped="0" errors="0" time="10.449305">
+<testsuite name="reporter\attributesReporting.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="2" failures="0" skipped="0" time="0.038" errors="0">
+<testcase name="attributes reporting › reporter.testItems should be updated with attributes" classname="reporter\attributesReporting.spec.ts" time="0.026">
+</testcase>
+<testcase name="attributes reporting › reporter.suitesInfo should be with attributes" classname="reporter\attributesReporting.spec.ts" time="0.012">
+</testcase>
+</testsuite>
+<testsuite name="reporter\descriptionReporting.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="2" failures="0" skipped="0" time="0.065" errors="0">
+<testcase name="description reporting › reporter.testItems should be updated with description" classname="reporter\descriptionReporting.spec.ts" time="0.04">
+</testcase>
+<testcase name="description reporting › reporter.suitesInfo should be with description" classname="reporter\descriptionReporting.spec.ts" time="0.025">
+</testcase>
+</testsuite>
+<testsuite name="reporter\statusesReporting.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="3" failures="0" skipped="0" time="0.138" errors="0">
+<testcase name="statuses reporting › reporter.testItems should be updated with statuses" classname="reporter\statusesReporting.spec.ts" time="0.075">
+</testcase>
+<testcase name="statuses reporting › reporter.suitesInfo should be with statuses" classname="reporter\statusesReporting.spec.ts" time="0.055">
+</testcase>
+<testcase name="statuses reporting › reporter.customLaunchStatus should be updated with status" classname="reporter\statusesReporting.spec.ts" time="0.008">
+</testcase>
+</testsuite>
+<testsuite name="reporter\testCaseIdReporting.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="2" failures="0" skipped="0" time="0.13" errors="0">
+<testcase name="testCaseId reporting › reporter.testItems should be updated with testCaseId" classname="reporter\testCaseIdReporting.spec.ts" time="0.029">
+</testcase>
+<testcase name="testCaseId reporting › reporter.suitesInfo should be with testCaseId" classname="reporter\testCaseIdReporting.spec.ts" time="0.101">
+</testcase>
+</testsuite>
+<testsuite name="reportingApi.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="5" failures="1" skipped="0" time="0.137" errors="0">
+<testcase name="ReportingApi integration (Playwright) › addAttributes should call sendEventToReporter with params" classname="reportingApi.spec.ts" time="0.026">
+<failure message="reportingApi.spec.ts:13:7 addAttributes should call sendEventToReporter with params" type="FAILURE">
+<![CDATA[  reportingApi.spec.ts:13:7 › ReportingApi integration (Playwright) › addAttributes should call sendEventToReporter with params 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      21 |     utils.sendEventToReporter = (...a: any[]) => { /* mock */ };
+      22 |     ReportingApi.addAttributes(attrs, suite);
+    > 23 |     expect(called).toBeTruthy();
+         |                    ^
+      24 |     expect(args).toEqual([event, attrs, suite]);
+      25 |     // @ts-ignore
+      26 |     utils.sendEventToReporter = original;
+        at C:\Users\Camilo_Barajas\Documents\courses\ATM - JS INTER\portal-report\agent-js-playwright\tests\reportingApi.spec.ts:23:20
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\reportingApi-ReportingApi--33937-EventToReporter-with-params\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\reportingApi-ReportingApi--33937-EventToReporter-with-params\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\reportingApi-ReportingApi--33937-EventToReporter-with-params\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setDescription should call sendEventToReporter with params" classname="reportingApi.spec.ts" time="0.027">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setTestCaseId should call sendEventToReporter with params" classname="reportingApi.spec.ts" time="0.066">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setStatusPassed should call sendEventToReporter with &quot;passed&quot; status" classname="reportingApi.spec.ts" time="0.011">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › ReportingApi.log should call sendEventToReporter with params" classname="reportingApi.spec.ts" time="0.007">
+</testcase>
+</testsuite>
+<testsuite name="safeParse.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="5" failures="0" skipped="0" time="0.049" errors="0">
+<testcase name="ReportingApi integration (Playwright) › addAttributes should call sendEventToReporter with params" classname="safeParse.spec.ts" time="0.008">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setDescription should call sendEventToReporter with params" classname="safeParse.spec.ts" time="0.007">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setTestCaseId should call sendEventToReporter with params" classname="safeParse.spec.ts" time="0.017">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › setStatusPassed should call sendEventToReporter with &quot;passed&quot; status" classname="safeParse.spec.ts" time="0.006">
+</testcase>
+<testcase name="ReportingApi integration (Playwright) › ReportingApi.log should call sendEventToReporter with params" classname="safeParse.spec.ts" time="0.011">
+</testcase>
+</testsuite>
+<testsuite name="utils.spec.ts" timestamp="2025-11-07T15:30:41.157Z" hostname="" tests="16" failures="0" skipped="0" time="0.234" errors="0">
+<testcase name="isFalse utility › should return true for false and &quot;false&quot;" classname="utils.spec.ts" time="0.01">
+</testcase>
+<testcase name="isFalse utility › should return false for undefined and null" classname="utils.spec.ts" time="0.011">
+</testcase>
+<testcase name="isErrorLog utility › should return true if message contains &quot;error&quot; (case-insensitive)" classname="utils.spec.ts" time="0.091">
+</testcase>
+<testcase name="isErrorLog utility › should return false if message does not contain &quot;error&quot;" classname="utils.spec.ts" time="0.014">
+</testcase>
+<testcase name="fileExists utility › should return true if file exists" classname="utils.spec.ts" time="0.01">
+</testcase>
+<testcase name="fileExists utility › should return false if file does not exist" classname="utils.spec.ts" time="0.012">
+</testcase>
+<testcase name="promiseErrorHandler utility › should log error with empty message if not provided" classname="utils.spec.ts" time="0.006">
+</testcase>
+<testcase name="promiseErrorHandler utility › should log error with provided message" classname="utils.spec.ts" time="0.014">
+</testcase>
+<testcase name="promiseErrorHandler utility › should not log anything if promise resolves" classname="utils.spec.ts" time="0.017">
+</testcase>
+<testcase name="calculateRpStatus utility › should return FAILED for unknown outcome" classname="utils.spec.ts" time="0.006">
+</testcase>
+<testcase name="calculateRpStatus utility › should return PASSED for &quot;expected&quot; or &quot;flaky&quot; outcome" classname="utils.spec.ts" time="0.012">
+</testcase>
+<testcase name="calculateRpStatus utility › should return SKIPPED for &quot;skipped&quot; outcome and &quot;failed&quot; status" classname="utils.spec.ts" time="0.008">
+</testcase>
+<testcase name="calculateRpStatus utility › should return INTERRUPTED for &quot;skipped&quot; outcome and &quot;interrupted&quot; status" classname="utils.spec.ts" time="0.008">
+</testcase>
+<testcase name="calculateRpStatus utility › should return FAILED for &quot;unexpected&quot; outcome and no &quot;fail&quot; annotations" classname="utils.spec.ts" time="0.005">
+</testcase>
+<testcase name="calculateRpStatus utility › should return FAILED for &quot;unexpected&quot; outcome, &quot;fail&quot; annotation and &quot;passed&quot; status" classname="utils.spec.ts" time="0.005">
+</testcase>
+<testcase name="calculateRpStatus utility › should return PASSED for &quot;unexpected&quot; outcome, &quot;fail&quot; annotation and &quot;failed&quot; status" classname="utils.spec.ts" time="0.005">
+</testcase>
+</testsuite>
 </testsuites>

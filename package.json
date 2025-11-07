@@ -8,8 +8,8 @@
     "build": "npm run clean && tsc",
     "clean": "rimraf ./build",
     "lint": "eslint \"src/**/*.ts\"",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "npx playwright test",
+    "test:report": "npx playwright show-report",
     "lint:fix": "eslint . --ext .js,.ts --fix",
     "format": "prettier --write ."
   },

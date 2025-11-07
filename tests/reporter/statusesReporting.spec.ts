@@ -18,7 +18,7 @@ import { RPReporter } from '../../reporter';
 import { STATUSES } from '../../constants';
 import { mockConfig } from '../../mocks/configMock';
 import { RPClientMock } from '../../mocks/RPClientMock';
-import test from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
 const suiteName = 'suiteName';
 

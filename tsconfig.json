@@ -12,11 +12,11 @@
     "target": "es6",
     "baseUrl": ".",
     "paths": {
-      "*": ["node_modules/*", "src/types/*"]
+      "*": ["node_modules/*", "types/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "typeRoots": ["./node_modules/@types", "types"],
     "outDir": "./build"
   },
-  "include": ["./src/**/*", "mocks", "tests/utils.spec.ts", "index.ts", "reporter.ts", "reportingApi.ts", "utils.ts", "constants", "tests/reporter"],
+  "include": ["./src/**/*", "mocks", "tests/utils.spec.ts", "index.ts", "reporter.ts", "reportingApi.ts", "utils.ts", "constants", "tests/reporter", "types"],
   "exclude": ["node_modules", "src/__tests__"]
 }
