@@ -18,7 +18,7 @@ test.describe('ReportingApi integration (Playwright)', () => {
     let args: any[] = [];
     const original = utils.sendEventToReporter;
     // @ts-ignore
-    utils.sendEventToReporter = (...a: any[]) => { /* mock */ };
+    utils.sendEventToReporter = (...a: any[]) => { called = true; args = a; };
     ReportingApi.addAttributes(attrs, suite);
     expect(called).toBeTruthy();
     expect(args).toEqual([event, attrs, suite]);
